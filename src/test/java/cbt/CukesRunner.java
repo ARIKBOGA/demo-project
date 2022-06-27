@@ -15,4 +15,5 @@ import org.junit.runner.RunWith;
         publish = true,
         tags = ""
 )
-public class CukesRunner {}
+public class CukesRunner {
+}

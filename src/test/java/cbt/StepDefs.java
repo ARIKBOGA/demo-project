@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class StepDefs {
 
     @Given("^I am on the home page$")
-    public void i_am_on_the_home_page(){
+    public void i_am_on_the_home_page() {
         Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().get("http://etsy.com");
@@ -25,7 +25,7 @@ public class StepDefs {
     }
 
     @When("^I search for \"([^\"]*)\"$")
-    public void i_search_for(String search)  {
+    public void i_search_for(String search) {
         Driver.getDriver().findElement(By.cssSelector("[id*='search-query']")).sendKeys(search + Keys.ENTER);
     }
 
@@ -35,7 +35,7 @@ public class StepDefs {
     }
 
     @Then("^I should see more results$")
-    public void i_should_see_more_results()  {
+    public void i_should_see_more_results() {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("search"));
     }
 
